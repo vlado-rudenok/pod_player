@@ -224,8 +224,7 @@ class _PodVideoController extends _PodUiController {
     if (!isFullScreen) {
       podLog('full-screen-enabled');
 
-      Navigator.push(
-        mainContext,
+      Navigator.of(mainContext, rootNavigator: true).push(
         PageRouteBuilder(
           fullscreenDialog: true,
           pageBuilder: (BuildContext context, _, __) => FullScreenView(
